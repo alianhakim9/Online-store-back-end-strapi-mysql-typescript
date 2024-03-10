@@ -1,3 +1,5 @@
+import { sha512 } from "sha512-crypt-ts";
+
 export function generateOrderId(): string {
   const characters =
     "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
@@ -6,4 +8,8 @@ export function generateOrderId(): string {
     orderId += characters.charAt(Math.floor(Math.random() * characters.length));
   }
   return orderId;
+}
+
+export function generateSHA512Hash(data: string): string {
+  return sha512.crypt(data, "Wb8DSYC=v0lX?_3!");
 }

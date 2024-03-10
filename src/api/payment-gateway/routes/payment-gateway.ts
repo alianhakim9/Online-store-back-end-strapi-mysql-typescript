@@ -9,5 +9,23 @@ export default {
         middlewares: [],
       },
     },
+    {
+      method: "POST",
+      path: "/payment-gateway/callback",
+      handler: "payment-gateway.finish",
+      config: {
+        policies: [],
+        middlewares: [],
+      },
+    },
+    {
+      method: "PUT",
+      path: "/payment-gateway/callback",
+      handler: "payment-gateway.finish",
+      config: {
+        policies: [],
+        middlewares: [],
+      },
+    },
   ],
 };
