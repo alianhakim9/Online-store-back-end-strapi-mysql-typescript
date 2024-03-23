@@ -25,7 +25,7 @@
     "images": {
       "type": "media",
       "multiple": true,
-      "required": true,
+      "required": false,
       "allowedTypes": [
         "images"
       ]
@@ -55,6 +55,9 @@
       "type": "relation",
       "relation": "oneToOne",
       "target": "api::category.category"
+    },
+    "imgUrl": {
+      "type": "string"
     }
   }
 }

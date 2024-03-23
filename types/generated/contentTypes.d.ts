@@ -986,7 +986,7 @@ export interface ApiProductProduct extends Schema.CollectionType {
         minLength: 1;
       }>;
     description: Attribute.Text & Attribute.Required;
-    images: Attribute.Media & Attribute.Required;
+    images: Attribute.Media;
     price: Attribute.BigInteger & Attribute.Required;
     stock: Attribute.Integer & Attribute.Required;
     isDiscount: Attribute.Boolean;
@@ -998,6 +998,7 @@ export interface ApiProductProduct extends Schema.CollectionType {
       'oneToOne',
       'api::category.category'
     >;
+    imgUrl: Attribute.String;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
